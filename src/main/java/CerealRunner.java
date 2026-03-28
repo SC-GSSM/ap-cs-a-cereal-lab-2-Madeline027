@@ -21,9 +21,18 @@ public class CerealRunner
    * @param: max - the maximum integer value of the range
    * Precondition: min < max
    */
+
    public static  ArrayList<Cereal> filterCarbsPerCup(int min, int max)
    {
       //Add your solution to Question 1 here.
+      ArrayList<Cereal> result = new ArrayList<Cereal>();
+   for(Cereal c: cereals){
+      double cpc = c.getCarbs() / c.getCups();
+      if(cpc >= min && cpc <= max){
+         result.add(c);
+      }
+   }
+   return result;
    }
    
    /* Question 2: Write highestPercentFiber
@@ -35,6 +44,16 @@ public class CerealRunner
    public static Cereal highestPercentFiber()
    {
       //Add your solution to Question 2 here.
+      Cereal max = cereals.get(0);\
+      double fmax = 0;
+      for(Cereal a: cereals){
+         double fpc = a.getFiber() / a.getCalories();
+         if(fpc > fmax){
+            fmax = fpc;
+            max = a;
+         }
+      }
+      return max;
    }
   
    
@@ -47,6 +66,11 @@ public class CerealRunner
    public static double findNetCarbsPerCup(Cereal c)
    {
       //Add your solution to Question 3 here.
+      
+      double dcc = c.getCarbs() / c.getCups();
+      double dfc c.getFiber() / c.getCups();
+      double difference = dcc / dfc; 
+      return difference; 
    }
   
 
