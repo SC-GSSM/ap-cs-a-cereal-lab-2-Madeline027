@@ -44,7 +44,7 @@ public class CerealRunner
    public static Cereal highestPercentFiber()
    {
       //Add your solution to Question 2 here.
-      Cereal max = cereals.get(0);\
+      Cereal max = cereals.get(0);
       double fmax = 0;
       for(Cereal a: cereals){
          double fpc = a.getFiber() / a.getCalories();
@@ -68,7 +68,7 @@ public class CerealRunner
       //Add your solution to Question 3 here.
       
       double dcc = c.getCarbs() / c.getCups();
-      double dfc c.getFiber() / c.getCups();
+      double dfc = c.getFiber() / c.getCups();
       double difference = dcc / dfc; 
       return difference; 
    }
